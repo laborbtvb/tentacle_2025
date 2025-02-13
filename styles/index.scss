@@ -1,3 +1,7 @@
+* {
+    background-color: red!important;
+}
+
 @import "normalize";
 @import "variables";
 @import "mixins";
@@ -44,3 +48,4 @@
 @import "wysiwyg";
 @import "upload_dropzone";
 @import "summary";
+@import "assets/tentacle/styles/index";
