@@ -4720,3 +4720,39 @@ zd-summary-block {
 [dir=rtl] zd-summary-block {
   border-right-color: #859fa1;
 }
+
+@font-face {
+  font-family: "Benton Sans Ultra Condensed";
+  src: url($assets-bentonsans-ultracondensed-bold-woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Benton Sans";
+  src: url($assets-bentonsanspro-400-normal-latin-woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Benton Sans";
+  src: url($assets-bentonsanspro-700-bold-latin-woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Benton Sans Condensed";
+  src: url($assets-bentonsansprocondensed-700-bold-latin-woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  background: url(./assets/images/background-tile.webp) fixed repeat;
+  background-size: 16rem;
+  font-family: "Benton Sans", sans-serif;
+  color: #fff;
+}
+
+.hero {
+  background-image: none;
+  background-color: transparent;
+}

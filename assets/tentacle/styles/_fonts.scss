@@ -1,1 +1,29 @@
 // This file should only contain font-related styles
+
+@font-face {
+  font-family: 'Benton Sans Ultra Condensed';
+  src: url($assets-bentonsans-ultracondensed-bold-woff2) format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  src: url($assets-bentonsanspro-400-normal-latin-woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  src: url($assets-bentonsanspro-700-bold-latin-woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Benton Sans Condensed';
+  src: url($assets-bentonsansprocondensed-700-bold-latin-woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
