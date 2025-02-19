@@ -1,18 +1,25 @@
 <div class="container-divider"></div>
-<div class="container">
-  <div class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
+
+  <div class="search-container-header">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search scoped=settings.scoped_kb_search submit=false}}
+      {{search instant=settings.instant_search submit=false}}
+          
+
+
+ </div>
+
+<div class="breadcrumbs-container">
+   {{breadcrumbs}}
     </div>
-  </div>
+
 
   <div class="article-container" id="article-container">
-    <aside class="article-sidebar" aria-labelledby="section-articles-title">
+     
+ 
+    {{!--  <aside class="article-sidebar" aria-labelledby="section-articles-title">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">
           <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
@@ -45,8 +52,9 @@
         </div>
       {{/if}}
     </aside>
-
+ --}}
     <article id="main-content" class="article">
+      
       <header class="article-header">
         <h1 title="{{article.title}}" class="article-title">
           {{article.title}}
@@ -58,7 +66,7 @@
           {{/if}}
         </h1>
 
-        <div class="article-author">
+     {{!--   <div class="article-author">
           {{#if settings.show_article_author}}
             <div class="avatar article-avatar">
               {{#if article.author.agent}}
@@ -91,7 +99,7 @@
           <div class="article-subscribe">{{subscribe}}</div>
         {{/if}}
       </header>
-
+ --}}
       <section class="article-info">
         <div class="article-content">
           <div class="article-body">{{article.body}}</div>
@@ -131,7 +139,7 @@
           {{/if}}
         </div>
       </section>
-
+{{!--
       <footer>
         <div class="article-footer">
           {{#if settings.show_article_sharing}}
@@ -324,6 +332,7 @@
           </section>
         </div>
       {{/if}}
+      --}}
     </article>
   </div>
 </div>

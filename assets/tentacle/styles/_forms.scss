@@ -1,0 +1,132 @@
+#new-request-form input,
+#new-request-form textarea {
+  background-color: $color-secondary;
+}
+
+#new-request-form [data-garden-id="dropdowns.combobox.trigger"] {
+    background-color: $color-secondary;
+}
+
+#new-request-form [data-garden-id="dropdowns.combobox.floating"] {
+    background-color: $color-secondary;
+}
+
+#new-request-form [data-garden-id="dropdowns.combobox.listbox"] {
+    background-color: $color-secondary;
+}
+
+#new-request-form [data-garden-id="dropdowns.combobox.listbox"] li:hover {
+    background-color: $color-secondary;
+}
+
+#new-request-form label {
+    color: $color-secondary;
+}
+
+//Hintes
+
+#new-request-form [data-garden-id="forms.input_hint"],
+#new-request-form [data-garden-id="dropdowns.combobox.hint"] {
+    color: $color-secondary;
+}
+
+// Editor
+[data-test-id="zd-wysiwyg-editor"] .ck.ck-editor__main > .ck-editor__editable {
+    background-color: $color-secondary;
+}
+
+[data-test-id="zd-wysiwyg-editor"] {
+    background-color: $color-secondary;
+    color: $color-primary;
+}
+
+// All Fields outer
+
+#new-request-form form {
+    row-gap: 2rem;
+}
+
+//Attachement
+#new-request-form [data-garden-id="forms.file_upload"] {
+    border: solid 1px $color-secondary;
+}
+
+#new-request-form [data-garden-id="forms.file_upload"]:hover {
+    background: hsla(0, 0%, 0%, 0.3);
+}
+
+[data-garden-id="forms.file_upload"] span {
+    color: $color-secondary;
+}
+
+[data-garden-id="forms.file_list.item"] {
+    background: $color-secondary;
+    border-radius: $border-radius;
+    color: $color-primary;
+}
+
+[data-garden-id="buttons.anchor"] {
+    color: $color-primary;
+}
+
+[data-garden-id="buttons.anchor"]:visited, [data-garden-id="buttons.anchor"]:hover {
+    color: $color-primary;
+}
+
+// Submit Button
+
+
+ // Zendesk submit button styled like the primary button
+#new-request-form [data-garden-id="buttons.button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;    // ensure text is centered
+    padding: 1.5rem;       // adjust padding as needed
+    color: $color-secondary;
+    border: 2px solid black;
+    background: $color-tertiary;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;         // important for pseudo-elements
+    z-index: 2;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+/* Noise effect overlay (on top of the background, behind the text) */
+#new-request-form [data-garden-id="buttons.button"]::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: url(./assets/images/noise-button.webp) repeat;
+    background-size: auto;
+    animation: animateGrain 0.2s steps(10) infinite;
+    opacity: 0;               // hidden by default
+    pointer-events: none;
+    z-index: 1;               // sits above the background, below the text
+  }
+  
+  /* Show noise effect on hover */
+  #new-request-form [data-garden-id="buttons.button"]:hover::before {
+    opacity: 0.5;
+  }
+  
+  @keyframes animateGrain {
+    0%, to { transform: translate(0); }
+    10% { transform: translate(-5%, -10%); }
+    20% { transform: translate(-15%, -20%); }
+    30% { transform: translate(-5%, -10%); }
+    40% { transform: translate(-15%, -20%); }
+    50% { transform: translate(-5%, -10%); }
+    60% { transform: translate(-15%, -20%); }
+    70% { transform: translate(-5%, -10%); }
+    80% { transform: translate(-15%, -20%); }
+    90% { transform: translate(-5%, -10%); }
+  }
+  

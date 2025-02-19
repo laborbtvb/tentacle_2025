@@ -1,4 +1,170 @@
+/******** Hero ********/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero {
-    background-image: none;
-    background-color: transparent;
+  background-image: none;
+  background-color: transparent;
+
+}
+
+.hero-inner {
+  position: relative;
+  top: auto;
+  transform: none;
+  width: 100%;
+}
+
+.section.hero {
+  padding: 3rem 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  width: 100%;
+
+}
+
+/******** Search ********/
+
+.search {
+  border: 0px;
+}
+
+.search::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url(./assets/images/raster-tile.png);
+  background-size: 20px;
+  background-repeat: repeat;
+  transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+  border-radius: 0.5rem;
+}
+
+.search input[type="search"] {
+  background-color: $color-secondary;
+  border: 1px $color-primary solid;
+  border-radius: 10px;
+}
+
+.hero-inner .search input[type="search"] {
+  height: 3rem;
+}
+
+[dir="ltr"] .search .clear-button {
+  background-color: $color-secondary;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+}
+
+[dir="ltr"] .search .clear-button:focus {
+  color: initial;
+  border: 1px solid $color-tertiary;
+  box-shadow: none;
+}
+
+[dir="ltr"] .search-has-value input[type="search"] {
+  border-right: 0px;
+}
+
+//Search: Autofill-Menu
+zd-autocomplete {
+  background: $color-secondary;
+  color: $color-primary;
+  border-radius: $border-radius;
+}
+
+zd-autocomplete-title-multibrand {
+  color: $color-primary;
+}
+
+zd-autocomplete-multibrand zd-autocomplete-title-multibrand {
+  color: $color-primary;
+}
+
+
+/******** Categories ********/
+
+a.blocks-item-link {
+  background-color: $color-card;
+  color: $color-secondary;
+  justify-content: flex-start;
+  border: black 1px solid;
+  gap: 0.25rem;
+  border-radius: $border-radius;
+  padding: 0.75rem 1.5rem 1rem;
+}
+
+.blocks-item {
+  border: none;
+}
+
+.blocks-item:hover * {
+  color: $color-secondary;
+}
+
+a.blocks-item-link:visited {
+  background-color: $color-card;
+  color: $color-secondary;
+}
+
+a.blocks-item-link:hover {
+  background-color: black;
+  color: $color-secondary;
+}
+
+a.blocks-item-link span {
+  text-align: left;
+}
+
+.blocks-item-title {
+  font-weight: 700;
+}
+
+//Grid
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.blocks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.blocks-item {
+  width: 100%; 
+  margin: 0;
+
+}
+
+.blocks-item-description {
+  font-size: 0.875rem;
+
+}
+
+.blocks-item-description:not(:empty) {
+  margin-top: 0;
+}
+
+.blocks-item-link:focus {
+  box-shadow: none;
+  border-color: $color-tertiary;
 }

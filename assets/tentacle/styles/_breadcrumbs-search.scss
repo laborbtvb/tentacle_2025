@@ -1,0 +1,76 @@
+.search-container-header {
+    position: fixed;
+    top: 2.25rem;
+    width: 25%;
+    z-index: 3000;
+}
+
+@media only screen and (max-width: 700px) {
+    .search-container-header {
+        right: 5%;
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .search-container-header {
+        right: 5%;
+        width: 90%;
+        top: 6rem;
+        position: absolute;
+    }
+}
+
+//Breadcrumbs
+
+
+.breadcrumbs {
+    flex-wrap: wrap;
+}
+
+.breadcrumbs-container {
+    width: 100%;
+    padding: 5rem 0px 4rem;
+    max-width: 650px;
+}
+
+@media only screen and (max-width: 700px) {
+    .breadcrumbs-container {
+        padding: 3rem 0px 2rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .breadcrumbs-container {
+        padding: 5rem 0px 2rem;
+    }
+}
+
+
+
+.breadcrumbs li {
+    padding-bottom: 6px;
+}
+
+.breadcrumbs li + li::before {
+    margin: 0px 0.5rem; 
+}
+
+
+.breadcrumbs li a {
+    font-size: 0.875rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25rem; /* 142.857% */
+letter-spacing: 0.02188rem;
+text-transform: uppercase;
+color: $color-secondary;
+text-decoration-thickness: 2px;
+text-underline-offset: 6px;
+  text-decoration: underline 2px;
+
+}
+
+.breadcrumbs li a:visited {
+    color: $color-secondary;
+}

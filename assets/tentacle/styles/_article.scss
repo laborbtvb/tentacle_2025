@@ -1,0 +1,60 @@
+// Article Body / Text
+
+#article-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.article {
+    padding: 0;
+    max-width: 650px;
+}
+
+.article-header {
+    margin-top: 0;
+}
+
+.article-content {
+    margin: 0;
+}
+
+// Links 
+
+.article-body a {
+    color: $color-secondary;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+
+
+.article-body a:hover {
+    color: $color-tertiary;
+}
+
+//Text styles
+
+.article-body p {
+    font-size: 1rem;
+    line-height: 160%;
+    margin-bottom: 1rem;
+}
+
+.article-body ul {
+    margin: 0rem 0 1rem;
+    font-size: 1rem;
+}
+
+.article-body li {
+    margin-bottom: 0.5rem;
+}
+
+.article-body li::marker {
+    color: $color-tertiary;
+}
+
+.article-body h4 {
+    margin: 2rem 0rem 1rem;
+}

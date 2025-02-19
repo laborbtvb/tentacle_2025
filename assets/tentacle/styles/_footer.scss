@@ -1,0 +1,41 @@
+.footer {
+    width: 100%;
+    max-width: 1160px;
+    padding: 2.5rem 5%;
+    position: relative;
+    
+}
+
+.footer-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 4rem;
+    row-gap: 1.5rem;
+}
+@media only screen and (max-width: 750px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
+}
+
+.footer-logo {}
+
+.footer-link-wrapper {
+    width: max-content;
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.footer-link-wrapper a {
+
+    text-underline-offset: 6px;
+    text-decoration: underline 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-secondary;
+    
+}

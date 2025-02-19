@@ -1,0 +1,43 @@
+.header {
+
+}
+
+.header-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2rem 0 0;
+}
+
+.header-knowledgebase {
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-size: 1.32rem;
+    font-weight: 700;
+    transform: translateY(-1px);
+}
+
+.header-knowledgebase:visited {
+    color: $color-secondary;
+}
+.header-knowledgebase:hover, .header-knowledgebase:active, .header-knowledgebase:focus {
+    color: $color-tertiary;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+
+.header-logo:hover * {
+    color: $color-tertiary;
+    
+}
+
+
+@media only screen and (max-width: 700px) {
+    .header-logo {
+        display: none;
+    }
+}

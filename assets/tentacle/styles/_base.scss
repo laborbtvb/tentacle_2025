@@ -1,15 +1,105 @@
 $color-primary: #000;
-$color-secondary: #fff;
+$color-secondary: rgb(255, 235, 220);
+$color-tertiary: rgb(255, 70, 0);
+$color-card: #525252;
+$border-radius: 0.5rem;
+
+html {
+  font-size: 18px;
+}
 
 body {
   background: url(./assets/images/background-tile.webp) fixed repeat;
    background-size: 16rem; 
     font-family: 'Benton Sans', sans-serif;
     color: $color-secondary;
+} 
+
+main {
+  margin: 0px 5%; 
+}
+
+.pattern-shadow {
+  position: relative;
+}
+
+.heading-3d {
+  font-size: min(14vw, 4rem);
+  text-transform: uppercase;
+  transform: skewY(-8deg);
+  font-family: "Benton Sans Ultra Condensed", sans-serif;
+  text-shadow: .25px .25px #000,.5px .5px #000,.75px .75px #000,1px 1px #000,1.25px 1.25px #000,1.5px 1.5px #000,1.75px 1.75px #000,2px 2px #000,2.25px 2.25px #000,2.5px 2.5px #000,2.75px 2.75px #000,3px 3px #000,3.25px 3.25px #000,3.5px 3.5px #000,3.75px 3.75px #000,4px 4px #000,4.25px 4.25px #000,4.5px 4.5px #000,4.75px 4.75px #000,5px 5px #000,5.25px 5.25px #000,5.5px 5.5px #000,5.75px 5.75px #000,6px 6px #000,6.25px 6.25px #000,6.5px 6.5px #000,6.75px 6.75px #000,7px 7px #000,7.25px 7.25px #000,7.5px 7.5px #000,7.75px 7.75px #000,8px 8px #000,8.25px 8.25px #000,8.5px 8.5px #000,8.75px 8.75px #000,9px 9px #000,9.25px 9.25px #000,9.5px 9.5px #000,9.75px 9.75px #000,10px 10px #000,10.25px 10.25px #000,10.5px 10.5px #000,10.75px 10.75px #000,11px 11px #000,11.25px 11.25px #000,11.5px 11.5px #000,11.75px 11.75px #000,12px 12px #000,12.25px 12.25px #000,12.5px 12.5px #000,12.75px 12.75px #000,13px 13px #000,13.25px 13.25px #000,13.5px 13.5px #000,13.75px 13.75px #000,14px 14px #000,14.25px 14.25px #000,14.5px 14.5px #000,14.75px 14.75px #000,15px 15px #000,15.25px 15.25px #000,15.5px 15.5px #000,15.75px 15.75px #000,16px 16px #000,16.25px 16.25px #000,16.5px 16.5px #000,16.75px 16.75px #000,17px 17px #000,17.25px 17.25px #000,17.5px 17.5px #000,17.75px 17.75px #000,18px 18px #000;
+}
+
+.pattern-shadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url(./assets/images/raster-tile.png);
+  background-size: 20px;
+  background-repeat: repeat;
+transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+  border-radius: $border-radius;
+} 
+
+.primary-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  width: max-content;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
 
 }
 
+.primary-button a {
+  padding: 1rem;
+  color: $color-secondary;
+  position: relative;
+  border: 2px solid black;
+  background: $color-tertiary;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 0.875rem;  
+  font-weight: 700;
+  overflow: hidden;
+  z-index: 2;
+}
 
+.primary-button a span {
+  position: relative;
+  z-index: 3;
+}
 
+.primary-button a:hover {
+  text-decoration: none;
+}
 
+.primary-button a::before {
+content: "";
+position: absolute;
+top: -50%;
+left: -50%;
+right: -50%;
+bottom: -50%;
+background: url(./assets/images/noise-button.webp) repeat; /* Uses your asset variable */
+background-size: auto;
+animation: animateGrain 0.2s steps(10) infinite;
+opacity: 0;              /* Hidden by default */
+pointer-events: none;    /* Allow clicks to pass through */
+z-index: 1;              /* Ensure the noise layer sits above the button content */
+}
+
+.primary-button:hover a::before {
+  opacity: 0.5;
+}
+
+@keyframes animateGrain { 0%, to {transform: translate(0);} 10% {transform: translate(-5%, -10%);} 20% {transform: translate(-15%, -20%);} 30% {transform: translate(-5%, -10%);} 40% {transform: translate(-15%, -20%);} 50% {transform: translate(-5%, -10%);} 60% {transform: translate(-15%, -20%);} 70% {transform: translate(-5%, -10%);} 80% {transform: translate(-15%, -20%);} 90% {transform: translate(-5%, -10%);} }
 
