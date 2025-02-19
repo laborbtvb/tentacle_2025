@@ -1,16 +1,30 @@
 <div class="container-divider"></div>
+ <div class="search-container-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      </svg>
+      {{search instant=settings.instant_search submit=false}}
+          
+
+
+ </div>
+
+<div class="breadcrumbs-container">
+   {{breadcrumbs}}
+    </div>
+
 <div class="container">
-  <div class="sub-nav">
+  {{!--<div class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search submit=false}}
+      {{search scoped=settings.scoped_kb_search submit=false}}
     </div>
-  </div>
-
+  </div> --}}
   <div class="search-results">
     <aside class="search-results-sidebar">
       {{#if source_filters}}
@@ -172,6 +186,23 @@
               <article>
                 <header>
                   <div class="search-result-title-container">
+                    <div class="search-result-meta-container">
+                    <nav 
+                      {{#is type 'article'}}aria-label='{{t 'article_location_with_title' title=title}}'{{/is}}
+                      {{#is type 'community_post'}}aria-label='{{t 'post_location_with_title' title=title}}'{{/is}}
+                      {{#is type 'external_content_record'}}aria-label='{{t 'external_content_location_with_title' title=title}}'{{/is}}
+                    >
+                      <ol class="breadcrumbs search-result-breadcrumbs">
+                        {{#each path_steps}}
+                          <li><a href="{{url}}" target="{{target}}">{{name}}</a></li>
+                        {{/each}}
+                      </ol>
+                    </nav>
+                   {{!--   {{#unless is_external}}
+                 <span class="meta-data">{{author.name}}</span>
+                    {{/unless}}
+                    <span class="meta-data">{{date created_at}}</span>--}}   
+                  </div>
                     <h2 class="search-result-title">
                       <a href="{{url}}" {{#if is_external}} target="_blank" {{/if}}>
                         {{title}}
@@ -184,7 +215,7 @@
                       </a>
                     </h2>
                     <div class="search-result-icons">
-                      {{#if vote_sum}}
+                  {{!--   {{#if vote_sum}}
                         <span class="search-result-votes">
                           <span class="visibility-hidden">
                             {{t 'votes_sum' count=vote_sum}}
@@ -199,7 +230,7 @@
                             {{vote_sum}}
                           </span>
                         </span>
-                      {{/if}}
+                      {{/if}} 
                       {{#if comment_count}}
                         <span class="search-result-meta-count">
                           <span class="visibility-hidden">
@@ -212,26 +243,10 @@
                             {{comment_count}}
                           </span>
                         </span>
-                      {{/if}}
+                      {{/if}}--}}
                     </div>
                   </div>
-                  <div class="search-result-meta-container">
-                    <nav 
-                      {{#is type 'article'}}aria-label='{{t 'article_location_with_title' title=title}}'{{/is}}
-                      {{#is type 'community_post'}}aria-label='{{t 'post_location_with_title' title=title}}'{{/is}}
-                      {{#is type 'external_content_record'}}aria-label='{{t 'external_content_location_with_title' title=title}}'{{/is}}
-                    >
-                      <ol class="breadcrumbs search-result-breadcrumbs">
-                        {{#each path_steps}}
-                          <li><a href="{{url}}" target="{{target}}">{{name}}</a></li>
-                        {{/each}}
-                      </ol>
-                    </nav>
-                    {{#unless is_external}}
-                      <span class="meta-data">{{author.name}}</span>
-                    {{/unless}}
-                    <span class="meta-data">{{date created_at}}</span>
-                  </div>
+                  
                 </header>
                 <p class="search-result-description">{{text}}</p>
               </article>
@@ -263,3 +278,89 @@
   </div>
   {{pagination}}
 </div>
+
+{{!-- Hacky Approach to immediatly select a type – sadly this is not a native feature in zendesk. --}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run if the URL doesn't already include the Articles filter parameter
+  if (!window.location.search.includes('type=knowledge_base')) {
+    // Find the type filter section (assumed to be the first filters section)
+    var typeSection = document.querySelector('.search-results-sidebar .filters-in-section.collapsible-sidebar');
+    if (typeSection) {
+      var typeLinks = typeSection.querySelectorAll('a.sidenav-item');
+      var articlesLink = null;
+      typeLinks.forEach(function(link) {
+        var filterNameElem = link.querySelector('.filter-name');
+        if (filterNameElem && filterNameElem.textContent.trim() === 'Articles') {
+          articlesLink = link;
+        }
+      });
+      if (articlesLink) {
+        // Update the UI: mark Articles as selected.
+        typeLinks.forEach(function(link) {
+          link.classList.remove('current');
+          link.removeAttribute('aria-current');
+        });
+        articlesLink.classList.add('current');
+        articlesLink.setAttribute('aria-current', 'page');
+  
+        // Update the URL using history API so it reflects the selection.
+        var url = new URL(window.location);
+        url.searchParams.set('type', 'knowledge_base');
+        window.history.pushState({}, '', url);
+  
+        // Now fetch the updated HTML (the server will render with Articles selected).
+        fetch(url.href, { credentials: 'same-origin' })
+          .then(function(response) {
+            return response.text();
+          })
+          .then(function(html) {
+            // Create a temporary element to parse the returned HTML.
+            var tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+  
+            // Look for the "By Category" section in the fetched HTML.
+            var newCategorySection = null;
+            var sections = tempDiv.querySelectorAll('.search-results-sidebar .filters-in-section.collapsible-sidebar');
+            sections.forEach(function(section) {
+              var header = section.querySelector('h3.collapsible-sidebar-title');
+              if (header && header.textContent.trim() === 'By Category') {
+                newCategorySection = section;
+              }
+            });
+  
+            // If found, insert it into the current sidebar.
+            if (newCategorySection) {
+              var sidebar = document.querySelector('.search-results-sidebar');
+              // Remove any existing "By Category" section if present.
+              var existingCategories = sidebar.querySelectorAll('.filters-in-section.collapsible-sidebar');
+              existingCategories.forEach(function(section) {
+                var header = section.querySelector('h3.collapsible-sidebar-title');
+                if (header && header.textContent.trim() === 'By Category') {
+                  section.parentNode.removeChild(section);
+                }
+              });
+              // Append the new category section to the sidebar.
+              sidebar.appendChild(newCategorySection);
+  
+              // Optionally, expand the section immediately:
+              var toggle = newCategorySection.querySelector('.collapsible-sidebar-toggle');
+              if (toggle) {
+                toggle.setAttribute('aria-expanded', 'true');
+              }
+              var list = newCategorySection.querySelector('ul.multibrand-filter-list');
+              if (list) {
+                list.classList.remove('multibrand-filter-list--collapsed');
+              }
+            }
+          })
+          .catch(function(err) {
+            console.error('Error fetching updated filters:', err);
+          });
+      }
+    }
+  }
+});
+</script>
+

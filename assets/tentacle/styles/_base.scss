@@ -6,17 +6,36 @@ $border-radius: 0.5rem;
 
 html {
   font-size: 18px;
+  transition: 200ms;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
-  background: url(./assets/images/background-tile.webp) fixed repeat;
+  background: url("$assets-background-tile-webp") fixed repeat;
    background-size: 16rem; 
     font-family: 'Benton Sans', sans-serif;
     color: $color-secondary;
+    
 } 
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Benton Sans', sans-serif;
+}
 
 main {
   margin: 0px 5%; 
+  min-height: 75vh;
+}
+
+@media (min-width: 1024px) {
+  body > main {
+    min-height: 70vh;
+  }
 }
 
 .pattern-shadow {
@@ -39,7 +58,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: url(./assets/images/raster-tile.png);
+  background: url("$assets-raster-tile-png");
   background-size: 20px;
   background-repeat: repeat;
 transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
@@ -89,7 +108,7 @@ top: -50%;
 left: -50%;
 right: -50%;
 bottom: -50%;
-background: url(./assets/images/noise-button.webp) repeat; /* Uses your asset variable */
+background: url("$assets-noise-button-webp") repeat; /* Uses your asset variable */
 background-size: auto;
 animation: animateGrain 0.2s steps(10) infinite;
 opacity: 0;              /* Hidden by default */
@@ -103,3 +122,32 @@ z-index: 1;              /* Ensure the noise layer sits above the button content
 
 @keyframes animateGrain { 0%, to {transform: translate(0);} 10% {transform: translate(-5%, -10%);} 20% {transform: translate(-15%, -20%);} 30% {transform: translate(-5%, -10%);} 40% {transform: translate(-15%, -20%);} 50% {transform: translate(-5%, -10%);} 60% {transform: translate(-15%, -20%);} 70% {transform: translate(-5%, -10%);} 80% {transform: translate(-15%, -20%);} 90% {transform: translate(-5%, -10%);} }
 
+
+// Pagination
+
+.pagination-list{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+
+}
+
+.pagination-next-link, .pagination-next-link:hover,
+.pagination-last-link, .pagination-last-link:hover,
+.pagination-prev-link, .pagination-prev-link:hover,
+.pagination-first-link, .pagination-first-link:hover {
+  background: $color-secondary;
+  color: $color-primary;
+  border: 1px $color-primary solid;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  font-size: 0.75rem;  
+  font-weight: 700;
+}

@@ -1,3 +1,12 @@
+.category-container {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.category-content {
+    width: 100%;
+}
+
 .article-list-item a {
     color: $color-secondary;
 }
@@ -12,4 +21,8 @@
 
 .section-tree .see-all-articles {
     color: $color-tertiary;
+}
+
+.page-header-description {
+    font-style: normal;
 }

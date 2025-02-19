@@ -2,7 +2,6 @@
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -20,7 +19,7 @@ main {
 }
 
 .section.hero {
-  padding: 3rem 5%;
+  padding: 3rem 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -46,7 +45,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: url(./assets/images/raster-tile.png);
+  background: url("$assets-raster-tile-png");
   background-size: 20px;
   background-repeat: repeat;
   transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
@@ -98,18 +97,47 @@ zd-autocomplete-multibrand zd-autocomplete-title-multibrand {
 
 /******** Categories ********/
 
+.container{
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 1160px) {
+  .container {
+    width: 100%;
+  }
+
+}
+
 a.blocks-item-link {
   background-color: $color-card;
   color: $color-secondary;
   justify-content: flex-start;
   border: black 1px solid;
   gap: 0.25rem;
+  padding: 0;
   border-radius: $border-radius;
-  padding: 0.75rem 1.5rem 1rem;
+  overflow: hidden;
+}
+
+.blocks-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url("$assets-raster-tile-png");
+  background-size: 20px;
+  background-repeat: repeat;
+transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+  border-radius: $border-radius;
 }
 
 .blocks-item {
   border: none;
+  position: relative;
 }
 
 .blocks-item:hover * {
@@ -119,9 +147,11 @@ a.blocks-item-link {
 a.blocks-item-link:visited {
   background-color: $color-card;
   color: $color-secondary;
+  transition: 200ms;
 }
 
 a.blocks-item-link:hover {
+  transition: 200ms;
   background-color: black;
   color: $color-secondary;
 }
@@ -140,13 +170,15 @@ a.blocks-item-link span {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  padding: 0.75rem 1.5rem 1rem;
 }
 
 .blocks-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  column-gap: min(2rem, 3%);
   row-gap: 2rem;
+  width: 100%;
 }
 
 .blocks-item {
@@ -167,4 +199,18 @@ a.blocks-item-link span {
 .blocks-item-link:focus {
   box-shadow: none;
   border-color: $color-tertiary;
+}
+
+@media (min-width: 768px) { 
+  .blocks-list {
+    margin: 0;
+  }
+}
+
+// Icons
+
+.knowledge-base .card-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background: rgb(0, 0, 0);
 }

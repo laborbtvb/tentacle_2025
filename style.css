@@ -4747,19 +4747,35 @@ zd-summary-block {
 }
 html {
   font-size: 18px;
+  transition: 200ms;
 }
 
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
 body {
-  background: url(./assets/images/background-tile.webp) fixed repeat;
+  background: url("$assets-background-tile-webp") fixed repeat;
   background-size: 16rem;
   font-family: "Benton Sans", sans-serif;
   color: rgb(255, 235, 220);
 }
 
-main {
-  margin: 0px 5%;
+h1, h2, h3, h4, h5 {
+  font-family: "Benton Sans", sans-serif;
 }
 
+main {
+  margin: 0px 5%;
+  min-height: 75vh;
+}
+
+@media (min-width: 1024px) {
+  body > main {
+    min-height: 70vh;
+  }
+}
 .pattern-shadow {
   position: relative;
 }
@@ -4780,7 +4796,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: url(./assets/images/raster-tile.png);
+  background: url("$assets-raster-tile-png");
   background-size: 20px;
   background-repeat: repeat;
   transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
@@ -4829,7 +4845,7 @@ main {
   left: -50%;
   right: -50%;
   bottom: -50%;
-  background: url(./assets/images/noise-button.webp) repeat; /* Uses your asset variable */
+  background: url("$assets-noise-button-webp") repeat; /* Uses your asset variable */
   background-size: auto;
   animation: animateGrain 0.2s steps(10) infinite;
   opacity: 0; /* Hidden by default */
@@ -4873,11 +4889,35 @@ main {
     transform: translate(-5%, -10%);
   }
 }
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+}
+
+.pagination-next-link, .pagination-next-link:hover,
+.pagination-last-link, .pagination-last-link:hover,
+.pagination-prev-link, .pagination-prev-link:hover,
+.pagination-first-link, .pagination-first-link:hover {
+  background: rgb(255, 235, 220);
+  color: #000;
+  border: 1px #000 solid;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 /******** Hero ********/
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -4894,7 +4934,7 @@ main {
 }
 
 .section.hero {
-  padding: 3rem 5%;
+  padding: 3rem 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4918,7 +4958,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: url(./assets/images/raster-tile.png);
+  background: url("$assets-raster-tile-png");
   background-size: 20px;
   background-repeat: repeat;
   transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
@@ -4967,18 +5007,45 @@ zd-autocomplete-multibrand zd-autocomplete-title-multibrand {
 }
 
 /******** Categories ********/
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 1160px) {
+  .container {
+    width: 100%;
+  }
+}
 a.blocks-item-link {
   background-color: #525252;
   color: rgb(255, 235, 220);
   justify-content: flex-start;
   border: black 1px solid;
   gap: 0.25rem;
+  padding: 0;
   border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem 1rem;
+  overflow: hidden;
+}
+
+.blocks-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url("$assets-raster-tile-png");
+  background-size: 20px;
+  background-repeat: repeat;
+  transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+  border-radius: 0.5rem;
 }
 
 .blocks-item {
   border: none;
+  position: relative;
 }
 
 .blocks-item:hover * {
@@ -4988,9 +5055,11 @@ a.blocks-item-link {
 a.blocks-item-link:visited {
   background-color: #525252;
   color: rgb(255, 235, 220);
+  transition: 200ms;
 }
 
 a.blocks-item-link:hover {
+  transition: 200ms;
   background-color: black;
   color: rgb(255, 235, 220);
 }
@@ -5007,13 +5076,15 @@ a.blocks-item-link span {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  padding: 0.75rem 1.5rem 1rem;
 }
 
 .blocks-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  column-gap: min(2rem, 3%);
   row-gap: 2rem;
+  width: 100%;
 }
 
 .blocks-item {
@@ -5032,6 +5103,17 @@ a.blocks-item-link span {
 .blocks-item-link:focus {
   box-shadow: none;
   border-color: rgb(255, 70, 0);
+}
+
+@media (min-width: 768px) {
+  .blocks-list {
+    margin: 0;
+  }
+}
+.knowledge-base .card-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background: rgb(0, 0, 0);
 }
 
 #article-container {
@@ -5085,6 +5167,20 @@ a.blocks-item-link span {
 
 .article-body h4 {
   margin: 2rem 0rem 1rem;
+  text-transform: uppercase;
+}
+
+.article-body img {
+  margin: 2rem 0rem 1rem;
+}
+
+.category-container {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.category-content {
+  width: 100%;
 }
 
 .article-list-item a {
@@ -5101,6 +5197,10 @@ a.blocks-item-link span {
 
 .section-tree .see-all-articles {
   color: rgb(255, 70, 0);
+}
+
+.page-header-description {
+  font-style: normal;
 }
 
 .header-wrapper {
@@ -5147,18 +5247,18 @@ a.blocks-item-link span {
   z-index: 3000;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .search-container-header {
     right: 5%;
     width: 15rem;
+    position: absolute;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .search-container-header {
     right: 5%;
     width: 90%;
     top: 6rem;
-    position: absolute;
   }
 }
 .breadcrumbs {
@@ -5168,15 +5268,22 @@ a.blocks-item-link span {
 .breadcrumbs-container {
   width: 100%;
   padding: 5rem 0px 4rem;
+  max-width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+.breadcrumbs-container.breadcrumbs-container-article {
   max-width: 650px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .breadcrumbs-container {
     padding: 3rem 0px 2rem;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .breadcrumbs-container {
     padding: 5rem 0px 2rem;
   }
@@ -5203,6 +5310,10 @@ a.blocks-item-link span {
 }
 
 .breadcrumbs li a:visited {
+  color: rgb(255, 235, 220);
+}
+
+.breadcrumbs li {
   color: rgb(255, 235, 220);
 }
 
@@ -5363,12 +5474,15 @@ a.blocks-item-link span {
 }
 .footer {
   width: 100%;
-  max-width: 1160px;
-  padding: 2.5rem 5%;
+  display: flex;
+  justify-content: center;
   position: relative;
+  border: none;
+  padding: 2.5rem 5%;
 }
 
 .footer-wrapper {
+  max-width: 1160px;
   width: 100%;
   position: relative;
   display: flex;
@@ -5384,8 +5498,9 @@ a.blocks-item-link span {
 }
 .footer-link-wrapper {
   width: max-content;
+  max-width: 100%;
   display: flex;
-  column-gap: 1rem;
+  column-gap: 2rem;
   flex-wrap: wrap;
   row-gap: 1rem;
 }
@@ -5395,5 +5510,73 @@ a.blocks-item-link span {
   text-decoration: underline 2px;
   text-transform: uppercase;
   font-weight: 700;
+  color: rgb(255, 235, 220);
+  transition: 0.2s;
+}
+
+.footer-link-wrapper a:hover {
+  color: rgb(255, 70, 0);
+  transition: 0.1s;
+}
+
+.search-results-sidebar .sidenav-item:hover, .search-results-sidebar .sidenav-item.current {
+  background: rgb(255, 235, 220);
+  color: #000;
+  transition: 200ms;
+  border-radius: 0.5rem;
+}
+
+.search-results-sidebar .sidenav-item {
+  color: rgb(255, 235, 220);
+  transition: 200ms;
+}
+
+.search-results-sidebar .multibrand-filter-list .doc-count {
+  color: rgb(255, 235, 220);
+}
+
+.sidenav-item.current .doc-count {
+  color: #000;
+}
+
+.search-result-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-result-breadcrumbs li a {
+  font-size: 0.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 142.857% */
+  letter-spacing: 0.02188rem;
+  text-transform: uppercase;
+  color: rgb(255, 235, 220);
+  text-underline-offset: 3px;
+  text-decoration: underline 1px;
+}
+
+.search-results-list header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.search-result-description {
+  margin-top: 6px;
+}
+
+.search-result-title a {
+  color: rgb(255, 235, 220);
+  font-size: 1.2rem;
+}
+
+.search-result-description em {
+  color: rgb(255, 70, 0);
+  font-style: normal;
+}
+
+.collapsible-sidebar-toggle {
   color: rgb(255, 235, 220);
 }

@@ -1,0 +1,73 @@
+// Sidebar
+
+.search-results-sidebar .sidenav-item:hover, .search-results-sidebar .sidenav-item.current {
+    background: $color-secondary;
+    color: $color-primary;
+    transition: 200ms;
+    border-radius: $border-radius;
+}
+
+.search-results-sidebar .sidenav-item {
+    color: $color-secondary;
+    transition: 200ms;
+}
+
+.search-results-sidebar .multibrand-filter-list .doc-count {
+    color: $color-secondary;
+}
+
+.sidenav-item.current .doc-count {
+    color: $color-primary;
+}
+
+//Breadcrumbs
+
+.search-result-breadcrumbs {
+
+}
+
+.search-result-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.search-result-breadcrumbs li a {
+    font-size: 0.6rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25rem; /* 142.857% */
+letter-spacing: 0.02188rem;
+text-transform: uppercase;
+color: $color-secondary;
+
+text-underline-offset: 3px;
+  text-decoration: underline 1px;
+
+}
+
+.search-results-list header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.search-result-description {
+    margin-top: 6px;
+}
+
+.search-result-title a {
+    color: $color-secondary;
+    font-size: 1.2rem;
+}
+
+.search-result-description em {
+    color: $color-tertiary;
+    font-style: normal;
+}
+
+.collapsible-sidebar-toggle{
+    color: $color-secondary;
+}
