@@ -207,10 +207,62 @@ a.blocks-item-link span {
   }
 }
 
+//hoverstate cards
+
+.card-image {
+  overflow: hidden;
+  position: relative;
+}
+
+a.blocks-item-link .card-image::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: url("$assets-noise-button-webp") repeat; /* Uses your asset variable */
+  background-size: auto;
+  animation: animateGrain 0.2s steps(10) infinite;
+  opacity: 0;              /* Hidden by default */
+  pointer-events: none;    /* Allow clicks to pass through */
+  z-index: 1;              /* Ensure the noise layer sits above the button content */
+  transition: 200ms;
+  }
+
+
+  a.blocks-item-link:hover .card-image::before {
+    opacity: 0.5;
+    transition: 200ms;
+  }
 // Icons
 
 .knowledge-base .card-image {
   width: 100%;
   aspect-ratio: 3/2;
   background: rgb(0, 0, 0);
+}
+
+.card-image.cat-0 {
+  background: url("$assets-icon-hardware-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
+}
+
+.card-image.cat-1 {
+  background: url("$assets-icon-software-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
+}
+
+.card-image.cat-2 {
+  background: url("$assets-icon-how-to-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
+}
+
+.card-image.cat-3 {
+  background: url("$assets-icon-service-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
 }

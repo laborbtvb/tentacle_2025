@@ -1,22 +1,19 @@
 <div class="container-divider"></div>
- <div class="search-container-header">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-      </svg>
-      {{search instant=settings.instant_search submit=false}}
-          
-
-
- </div>
+<div class="search-container-header">
+  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+    <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+    <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+  </svg>
+  {{search instant=settings.instant_search submit=false}}
+</div>
 
 <div class="breadcrumbs-container">
-   {{breadcrumbs}}
-    </div>
-
+  {{breadcrumbs}}
+</div>
 
 <div class="container">
-  {{!-- <div class="sub-nav">
+  {{!--
+  <div class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -27,7 +24,7 @@
     </div>
   </div>
   --}}
-
+  
   <div class="category-container">
     <div class="category-content">
       <header class="page-header">
@@ -41,18 +38,35 @@
         {{!-- New card layout for sections --}}
         {{#if sections}}
           <ul class="blocks-list">
+            {{!-- Loop through sections --}}
             {{#each sections}}
+              {{#is id 25242930788253}}
+                {{!-- Skip the Downloads section for this category --}}
+              {{else}}
+                <li class="blocks-item">
+                  <a href="{{url}}" class="blocks-item-link">
+                    <div class="card-image sec-{{@index}}"></div>
+                    <div class="card-content">
+                      <span class="blocks-item-title card-title">{{name}}</span>
+                      <span class="blocks-item-description card-description">{{excerpt description}}</span>
+                    </div>
+                  </a>
+                </li>
+              {{/is}}
+            {{/each}}
+            
+            {{!-- For the specific Service category, append a hardcoded Download card --}}
+            {{#is category.id 25242786205469}}
               <li class="blocks-item">
-                <a href="{{url}}" class="blocks-item-link">
-                  <div class="card-image sec-{{@index}}"></div>
+                <a href="https://tentaclesync.com/downloads" target="_blank" rel="noopener noreferrer" class="blocks-item-link">
+                  <div class="card-image custom-download"></div>
                   <div class="card-content">
-                    <span class="blocks-item-title card-title">{{name}}</span>
-               
-                  <span class="blocks-item-description card-description">{{excerpt description}}</span>
+                    <span class="blocks-item-title card-title">Download</span>
+                    <span class="blocks-item-description card-description">View all our downloads on our home page</span>
                   </div>
                 </a>
               </li>
-            {{/each}}
+            {{/is}}
           </ul>
         {{else}}
           <i class="category-empty">
@@ -103,3 +117,13 @@
     </div>
   </div>
 </div>
+<section class="section-contact">
+  <div class="wrapper-contact">
+  <h2 class="contact heading-3d">Not what you needed?</h2>
+    <nav class="primary-button pattern-shadow">
+      <a href="/hc/en-us/requests/new?ticket_form_id=8872210400413">
+      <span>Contact Us!</span></a> 
+    </nav>
+  </div>
+  <div class="contact-image"></div>
+</section>

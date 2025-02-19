@@ -1,5 +1,5 @@
 .wrapper-contact {
-    padding: 5rem 0 2rem;
+    padding: 5rem 0 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -12,3 +12,19 @@
     font-size: min(10vw, 3rem);
 }
 
+.contact-image {
+
+    margin: 2rem 0;
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    aspect-ratio: 2160 / 500;
+    background: url("$assets-tentaclegruppe-webp");
+    background-size: contain;
+}
+
+.section-contact {
+    width: 100%;
+    margin-top: 3rem;
+    max-width: 1160px;
+}

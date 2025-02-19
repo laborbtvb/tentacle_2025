@@ -1,15 +1,18 @@
 // Sidebar
 
 .search-results-sidebar .sidenav-item:hover, .search-results-sidebar .sidenav-item.current {
-    background: $color-secondary;
-    color: $color-primary;
+    background: transparent;
+    color: $color-secondary;
     transition: 200ms;
     border-radius: $border-radius;
+    border: 1px $color-secondary solid;
 }
 
 .search-results-sidebar .sidenav-item {
     color: $color-secondary;
     transition: 200ms;
+    padding: 0.8rem;
+    border: 1px transparent solid;
 }
 
 .search-results-sidebar .multibrand-filter-list .doc-count {
@@ -17,7 +20,7 @@
 }
 
 .sidenav-item.current .doc-count {
-    color: $color-primary;
+    color: $color-secondary;
 }
 
 //Breadcrumbs
