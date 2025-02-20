@@ -22,7 +22,7 @@
 
 // Links 
 
-.article-body a {
+.article-body a, .article-body a:visited {
     color: $color-secondary;
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
@@ -47,6 +47,11 @@
     font-size: 1rem;
 }
 
+.article-body ol {
+    margin: 0rem 0 1rem;
+    font-size: 1rem;
+}
+
 .article-body li {
     margin-bottom: 0.5rem;
 }
@@ -63,4 +68,18 @@
 // Image embed
 .article-body img {
     margin: 2rem 0rem 1rem;
+}
+
+//Contact Tags
+
+section.content-tags p {
+    color: $color-secondary;
+}
+
+.content-tag-item a, .content-tag-item a:visited{
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-weight: bold;
+    text-decoration: underline 2px;
+    text-underline-offset: 6px;
 }

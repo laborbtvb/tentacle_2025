@@ -74,3 +74,26 @@ text-underline-offset: 3px;
 .collapsible-sidebar-toggle{
     color: $color-secondary;
 }
+
+//No results
+
+.search-results .no-results {
+    color: $color-secondary;
+    padding-top: 0rem;
+    padding-bottom: 2.5rem;
+}
+
+.search-results .no-results .headline{
+    color: $color-secondary;
+    font-weight: 700;
+}
+
+.search-results .no-results .action-prompt{
+    color: $color-secondary;
+    font-weight: 400;
+}
+
+.search-results .no-results .action-prompt a:visited, .search-results .no-results .action-prompt a {
+    color: $color-secondary;
+    text-decoration: underline;
+}

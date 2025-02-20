@@ -1,21 +1,38 @@
 <div class="container-divider"></div>
-<div id="main-content" class="error-page">
-  <h1>{{t 'oops'}}</h1>
+<div class="search-container-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      </svg>
+      {{search instant=settings.instant_search submit=false}}
+          
+
+
+ </div>
+
+
+
+
+<div id="main-content" class="errorpage-container">
+  <div id="error-image-404"></div>
+
+  <div class="error-container-content">
+  <h1>Oops! You're out of sync.</h1>
 
   {{#is error 'unauthorized'}}
-    <h2>{{link 'sign_in'}}</h2>
+    <p>{{link 'sign_in'}}</p>
   {{/is}}
 
   {{#is error 'forbidden'}}
-    <h2>{{t 'not_authorized'}}</h2>
+    <p>{{t 'not_authorized'}}</p>
   {{/is}}
 
   {{#is error 'not_found'}}
-    <h2>{{t 'nonexistent_page'}}</h2>
-    <p>{{t 'mistyped_address_or_moved_page'}}</p>
+    <p>{{t 'nonexistent_page'}}. {{t 'mistyped_address_or_moved_page'}}.</p>
   {{/is}}
 
   {{#link 'help_center'}}
     {{t 'back_to_homepage'}}
   {{/link}}
+  </div>
 </div>

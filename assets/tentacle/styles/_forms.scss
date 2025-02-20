@@ -130,3 +130,43 @@
     90% { transform: translate(-5%, -10%); }
   }
   
+
+  #new-request-form [data-garden-id="buttons.anchor"], #new-request-form [data-garden-id="buttons.anchor"]:visited {
+    color: $color-secondary;
+    
+  }
+  #new-request-form [data-garden-id="buttons.anchor"]:hover {
+    color: $color-tertiary;
+    text-decoration: none;
+  }
+
+  // Error Messages
+
+  #new-request-form [data-garden-id="forms.input_message"] {
+    color: $color-tertiary;
+    font-weight: 700;
+  }
+
+  #new-request-form [data-garden-id="forms.input_message"] [data-garden-id="forms.input_message_icon"] {
+    fill: $color-tertiary;
+  }
+
+  //Notification
+
+  div:has(> [data-test-id="notification"]) {
+    background-color: $color-tertiary !important; 
+    border-radius: $border-radius;
+    border: 1px black solid;
+
+  }
+
+  [data-test-id="notification"] {
+    color: $color-secondary;
+    background-color: $color-tertiary !important;
+    border-radius: $border-radius !important;
+    border: none !important;
+  }
+
+  [data-test-id="notification"] strong {
+    color: $color-secondary !important;
+  }
