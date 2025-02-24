@@ -5806,6 +5806,10 @@ div:has(> [data-test-id=notification]) {
   text-decoration: underline;
 }
 
+.error-strong {
+  color: rgb(255, 70, 0);
+}
+
 .errorpage-container {
   margin: 1rem 0;
   max-width: 1160px;
