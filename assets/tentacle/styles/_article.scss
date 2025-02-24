@@ -91,3 +91,37 @@ section.content-tags p {
 div.article-body div {
     margin: 1rem 0rem 2rem;
 }
+
+//Callout-Block
+.article-body pre {
+    margin: 2rem 0;
+    font-family: 'Benton Sans', sans-serif;
+    font-size: 1rem;
+    background: $color-secondary;
+    color: $color-primary;
+    padding: 1rem;
+    white-space: normal;
+    border-radius: $border-radius;
+    position: relative;
+    overflow: visible;
+}
+
+.article-body pre span {
+    white-space: normal!important;
+}
+
+.article-body pre::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url("$assets-raster-tile-png");
+    background-size: 20px;
+    background-repeat: repeat;
+  transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+    border-radius: $border-radius;
+    
+}
