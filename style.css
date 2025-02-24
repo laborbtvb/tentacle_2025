@@ -5855,3 +5855,7 @@ div:has(> [data-test-id=notification]) {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.errorpage-container a:hover {
+  color: rgb(255, 70, 0);
+}
