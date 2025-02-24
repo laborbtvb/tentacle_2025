@@ -94,7 +94,7 @@ section.content-tags p {
 
 // Video
 
-div.article-body div:has(iframe) {
+div.article-body div:has(> iframe) {
     margin: 1rem 0rem 2rem;
     border: 1px black solid;
     border-radius: $border-radius;
