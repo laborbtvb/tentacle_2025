@@ -5206,8 +5206,8 @@ a.blocks-item-link:hover .card-image::before {
   margin-bottom: 1rem;
 }
 
-.article-body ul {
-  margin: 0rem 0 1rem;
+.article-body ul > ul, .article-body ol > ol, .article-body ol > ul, .article-body li > ul, .article-body ul {
+  margin: 0.5rem 0 0.5rem;
   font-size: 1rem;
 }
 
@@ -5231,6 +5231,8 @@ a.blocks-item-link:hover .card-image::before {
 
 .article-body img {
   margin: 2rem 0rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px black solid;
 }
 
 section.content-tags p {
@@ -5247,6 +5249,10 @@ section.content-tags p {
 
 div.article-body div {
   margin: 1rem 0rem 2rem;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  background: black;
+  overflow: hidden;
 }
 
 .article-body pre {
@@ -5706,11 +5712,13 @@ div:has(> [data-test-id=notification]) {
   border: 1px black solid;
 }
 
-[data-test-id=notification] {
+[data-test-id=notification], [data-test-id=notification]:focus, [data-test-id=notification]:active {
   color: rgb(255, 235, 220);
   background-color: rgb(255, 70, 0) !important;
   border-radius: 0.5rem !important;
   border: none !important;
+  margin: 0 !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2716%27%20height=%2716%27%3E%3Cg%20fill=%27none%27%20stroke=%27%23ffebdc%27%3E%3Cpath%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%20d=%27m4%209%202.5%202.5%205-5%27/%3E%3Ccircle%20cx=%277.5%27%20cy=%278.5%27%20r=%277%27/%3E%3C/g%3E%3C/svg%3E") !important;
 }
 
 [data-test-id=notification] strong {

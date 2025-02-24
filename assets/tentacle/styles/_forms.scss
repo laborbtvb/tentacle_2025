@@ -157,14 +157,15 @@
     background-color: $color-tertiary !important; 
     border-radius: $border-radius;
     border: 1px black solid;
-
   }
 
-  [data-test-id="notification"] {
+  [data-test-id="notification"],  [data-test-id="notification"]:focus, [data-test-id="notification"]:active{
     color: $color-secondary;
     background-color: $color-tertiary !important;
     border-radius: $border-radius !important;
     border: none !important;
+    margin: 0!important;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2716%27%20height=%2716%27%3E%3Cg%20fill=%27none%27%20stroke=%27%23ffebdc%27%3E%3Cpath%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%20d=%27m4%209%202.5%202.5%205-5%27/%3E%3Ccircle%20cx=%277.5%27%20cy=%278.5%27%20r=%277%27/%3E%3C/g%3E%3C/svg%3E") !important;
   }
 
   [data-test-id="notification"] strong {

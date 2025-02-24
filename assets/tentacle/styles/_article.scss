@@ -46,8 +46,8 @@
     margin-bottom: 1rem;
 }
 
-.article-body ul {
-    margin: 0rem 0 1rem;
+.article-body ul > ul, .article-body ol > ol, .article-body ol > ul, .article-body li > ul, .article-body ul {
+    margin: 0.5rem 0 0.5rem;
     font-size: 1rem;
 }
 
@@ -72,7 +72,11 @@
 // Image embed
 .article-body img {
     margin: 2rem 0rem 1rem;
+    border-radius: $border-radius;
+    border: 1px black solid;
 }
+
+
 
 //Contact Tags
 
@@ -88,8 +92,14 @@ section.content-tags p {
     text-underline-offset: 6px;
 }
 
+// Video
+
 div.article-body div {
     margin: 1rem 0rem 2rem;
+    border: 1px black solid;
+    border-radius: $border-radius;
+    background: black;
+    overflow: hidden;
 }
 
 //Callout-Block
