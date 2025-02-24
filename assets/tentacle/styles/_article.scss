@@ -1,4 +1,8 @@
 // Article Body / Text
+.article-info {
+    width: 100%;
+}
+
 
 #article-container {
     display: flex;
@@ -82,4 +86,8 @@ section.content-tags p {
     font-weight: bold;
     text-decoration: underline 2px;
     text-underline-offset: 6px;
+}
+
+div.article-body div {
+    margin: 2rem 0rem 1rem;
 }
