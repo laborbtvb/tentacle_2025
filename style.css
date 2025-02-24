@@ -5247,12 +5247,16 @@ section.content-tags p {
   text-underline-offset: 6px;
 }
 
-div.article-body div {
-  margin: 1rem 0rem 2rem;
-  border: 1px black solid;
+iframe {
+  box-sizing: border-box;
   border-radius: 0.5rem;
   background: black;
   overflow: hidden;
+  outline: 1px solid black;
+}
+
+.article-body div {
+  margin: 1rem 0rem 2rem;
 }
 
 .article-body pre {
