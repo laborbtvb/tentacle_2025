@@ -5252,7 +5252,10 @@ iframe {
   border-radius: 0.5rem;
   background: black;
   overflow: hidden;
+  max-width: 100%;
+  height: auto;
   outline: 1px solid black;
+  aspect-ratio: 16/9;
 }
 
 .article-body div {
