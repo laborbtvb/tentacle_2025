@@ -94,7 +94,7 @@ section.content-tags p {
 
 // Video
 
-iframe {
+iframe, .video-container iframe {
     box-sizing: border-box;
     border-radius: $border-radius;
     background: black;
@@ -103,9 +103,17 @@ iframe {
     height: auto;
         outline: 1px solid black;
         aspect-ratio: 16 / 9;
-
-      
+    border: none;
 }
+
+.video-container {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    position: relative;
+}
+
 
 .article-body div {
     margin: 1rem 0rem 2rem;
