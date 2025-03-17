@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <style>
+      .c, .d, .e, .f, .g, .h {
+        stroke: #000;
+      }
+
+      .c, .d, .e, .f, .h {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .c, .e {
+        fill: #fff;
+      }
+
+      .d, .h {
+        stroke-width: 1.12px;
+      }
+
+      .i, .g {
+        fill: #fab900;
+      }
+
+      .e, .f {
+        stroke-width: 1.12px;
+      }
+
+      .f {
+        fill: #929292;
+      }
+
+      .g {
+        stroke-miterlimit: 10;
+      }
+
+      .h {
+        fill: #646464;
+      }
+    </style>
+  </defs>
+  <g id="a" data-name="BG">
+    <rect class="i" width="300" height="200"/>
+  </g>
+  <g id="b" data-name="Devices">
+    <path class="h" d="M98.71,81.5h7.53c1.76,0,3.19,1.43,3.19,3.19v47.75c0,1.76,1.43,3.19,3.19,3.19h17.68c1.76,0,3.19-1.43,3.19-3.19v-2.71c0-1.76,1.43-3.19,3.19-3.19h25.58c1.76,0,3.19,1.43,3.19,3.19v7.56c0,1.76,1.43,3.19,3.19,3.19h28.21c1.76,0,3.19-1.43,3.19-3.19V59.79c0-1.76-1.43-3.19-3.19-3.19h-98.16c-1.76,0-3.19,1.43-3.19,3.19v18.52c0,1.76,1.43,3.19,3.19,3.19Z"/>
+    <circle class="f" cx="149.01" cy="87.54" r="12.78"/>
+    <circle class="g" cx="149.01" cy="87.54" r="5.74"/>
+    <rect class="d" x="120.9" y="75.81" width="9.59" height="40.12" rx="4.79" ry="4.79"/>
+    <rect class="d" x="167.53" y="75.81" width="9.59" height="40.12" rx="4.79" ry="4.79"/>
+    <path class="g" d="M194.42,70.26v51.22c0,1.79-2.25,2.6-3.39,1.22l-6.13-7.41c-.28-.34-.44-.78-.44-1.22v-37.43c0-.49.19-.97.53-1.33l6.13-6.39c1.2-1.24,3.3-.4,3.3,1.33Z"/>
+    <path class="f" d="M143.2,52.08h10.59c2.76,0,5,2.24,5,5v1.08c0,5.52-4.48,10-10,10h-.59c-5.52,0-10-4.48-10-10v-1.08c0-2.76,2.24-5,5-5Z"/>
+    <rect class="e" x="145.15" y="139.47" width="7.66" height="10.87" rx="2" ry="2"/>
+    <rect class="e" x="141.35" y="147.13" width="15.28" height="10.34" rx="2" ry="2"/>
+    <rect class="c" x="266.73" y="65.02" width="7.66" height="9.39" rx="1" ry="1" transform="translate(178.7 -194.15) rotate(56.35)"/>
+    <rect class="c" x="256.15" y="69.06" width="15.28" height="10.34" rx="1" ry="1" transform="translate(179.43 -186.5) rotate(56.35)"/>
+    <rect class="c" x="259.1" y="93.63" width="7.66" height="9.39" rx="1" ry="1" transform="translate(266.23 -182.37) rotate(70.17)"/>
+    <rect class="c" x="247.64" y="95.92" width="15.28" height="10.34" rx="1" ry="1" transform="translate(263.77 -173.35) rotate(70.17)"/>
+    <path class="f" d="M143.71,124.39h10.59c2.76,0,5,2.24,5,5v1.08c0,5.52-4.48,10-10,10h-.59c-5.52,0-10-4.48-10-10v-1.08c0-2.76,2.24-5,5-5Z" transform="translate(298.01 264.85) rotate(180)"/>
+  </g>
+</svg>

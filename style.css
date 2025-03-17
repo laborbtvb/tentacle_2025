@@ -5534,6 +5534,10 @@ iframe, .video-container iframe {
   padding-bottom: 4px;
 }
 
+.breadcrumbs-container.no-link li:nth-child(2) {
+  display: none;
+}
+
 .wrapper-contact {
   padding: 5rem 0 0;
   display: flex;
@@ -5922,4 +5926,58 @@ div:has(> [data-test-id=notification]) {
 
 .errorpage-container a:hover {
   color: rgb(255, 70, 0);
+}
+
+.cat-25242792110877 .card-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background: rgb(0, 0, 0);
+  background-size: cover;
+}
+
+.cat-25242792110877 .sec-0 {
+  background: url("$assets-icon-sw-setup-svg");
+}
+
+.cat-25242792110877 .sec-1 {
+  background: url("$assets-icon-sw-studio-svg");
+}
+
+.cat-25242792110877 .sec-2 {
+  background: url("$assets-icon-sw-apps-svg");
+}
+
+.cat-25242792110877 .sec-3 {
+  background: url("$assets-icon-sw-desktop-svg");
+}
+
+.cat-25242757865501 .card-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  background: rgb(0, 0, 0);
+  background-size: cover;
+}
+
+.cat-25242757865501 .sec-0 {
+  background: url("$assets-icon-hw-synce-svg");
+}
+
+.cat-25242757865501 .sec-1 {
+  background: url("$assets-icon-hw-tracke-svg");
+}
+
+.cat-25242757865501 .sec-2 {
+  background: url("$assets-icon-hw-timebar-svg");
+}
+
+.cat-25242757865501 .sec-3 {
+  background: url("$assets-icon-hw-original-svg");
+}
+
+.cat-25242757865501 .sec-4 {
+  background: url("$assets-icon-hw-cables-svg");
+}
+
+.cat-25242757865501 .sec-5 {
+  background: url("$assets-icon-hw-accessories-svg");
 }

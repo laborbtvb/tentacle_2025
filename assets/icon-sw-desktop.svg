@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <style>
+      .c {
+        fill: #646464;
+      }
+
+      .c, .d, .e, .f, .g, .h, .i {
+        stroke: #000;
+      }
+
+      .c, .e, .f, .g, .h, .i {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .d {
+        fill: #c9c9c9;
+        stroke-miterlimit: 10;
+        stroke-width: .89px;
+      }
+
+      .j {
+        fill: #467dbe;
+      }
+
+      .e {
+        fill: #00aa82;
+      }
+
+      .f, .h {
+        fill: #929292;
+      }
+
+      .g {
+        fill: #ff4600;
+      }
+
+      .h {
+        stroke-width: .96px;
+      }
+
+      .i {
+        fill: #fab900;
+      }
+    </style>
+  </defs>
+  <g id="a" data-name="BG">
+    <rect class="j" x=".27" width="300" height="200"/>
+  </g>
+  <g id="b" data-name="Devices">
+    <g>
+      <rect class="c" x="80.14" y="26.58" width="91.15" height="109.87" rx="3.34" ry="3.34" transform="translate(44.24 207.26) rotate(-90.02)"/>
+      <g>
+        <circle class="g" cx="77.74" cy="42.89" r="2.12"/>
+        <circle class="i" cx="85.62" cy="42.89" r="2.12"/>
+        <circle class="e" cx="93.49" cy="42.9" r="2.12"/>
+      </g>
+      <rect class="f" x="75.62" y="51.24" width="99.74" height="71.12" rx="5.02" ry="5.02"/>
+    </g>
+    <g>
+      <rect class="h" x="126.84" y="65.72" width="84.39" height="109.87" rx="3.21" ry="3.21" transform="translate(48.43 289.74) rotate(-90.02)"/>
+      <g>
+        <circle class="g" cx="121.07" cy="85.41" r="2.12"/>
+        <circle class="i" cx="128.95" cy="85.41" r="2.12"/>
+        <circle class="e" cx="136.82" cy="85.42" r="2.12"/>
+      </g>
+      <rect class="d" x="118.95" y="93.76" width="99.74" height="63.5" rx="4.75" ry="4.75"/>
+    </g>
+    <g>
+      <rect class="c" x="170.28" y="47.47" width="55.15" height="85.84" rx="2.3" ry="2.3" transform="translate(107.53 288.28) rotate(-90.02)"/>
+      <g>
+        <circle class="g" cx="161.91" cy="69.76" r="2.12"/>
+        <circle class="i" cx="169.79" cy="69.76" r="2.12"/>
+        <circle class="e" cx="177.66" cy="69.77" r="2.12"/>
+      </g>
+      <rect class="f" x="159.79" y="78.11" width="75.39" height="33.57" rx="3" ry="3"/>
+    </g>
+  </g>
+</svg>

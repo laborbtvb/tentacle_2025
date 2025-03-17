@@ -1,0 +1,57 @@
+// Category-Page styling (cards etc) via homepage.scss. 
+// Here, the icons are manually applied to the right categories. 
+
+// Software .cat-25242792110877
+
+.cat-25242792110877 .card-image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background: rgb(0, 0, 0);
+    background-size: cover;
+}
+
+.cat-25242792110877 .sec-0 {
+    background: url("$assets-icon-sw-setup-svg");
+  }
+  .cat-25242792110877 .sec-1 {
+    background: url("$assets-icon-sw-studio-svg");
+  }
+
+  .cat-25242792110877 .sec-2 {
+    background: url("$assets-icon-sw-apps-svg");
+  }
+
+  .cat-25242792110877 .sec-3 {
+    background: url("$assets-icon-sw-desktop-svg");
+  }
+
+  // Hardware .cat-25242757865501 
+
+  .cat-25242757865501 .card-image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background: rgb(0, 0, 0);
+    background-size: cover;
+  }
+
+  .cat-25242757865501 .sec-0 {
+    background: url("$assets-icon-hw-synce-svg");
+  }
+  .cat-25242757865501 .sec-1 {
+    background: url("$assets-icon-hw-tracke-svg");
+  }
+  .cat-25242757865501 .sec-2 {
+    background: url("$assets-icon-hw-timebar-svg");
+  }
+  .cat-25242757865501 .sec-3 {
+    background: url("$assets-icon-hw-original-svg");
+  }
+  .cat-25242757865501 .sec-4 {
+    background: url("$assets-icon-hw-cables-svg");
+  }
+  .cat-25242757865501 .sec-5 {
+    background: url("$assets-icon-hw-accessories-svg");
+  }
+
+
+

@@ -47,10 +47,10 @@
   <section class="categories blocks">
   <ul class="blocks-list">
     {{#each categories}}
-      {{#is id 115000834089}}
+      {{#is id 25242786205469}}
         {{!-- Exclude Downloads category --}}
       {{else}}
-        {{#is id 115000834029}}
+        {{#is id 115001500309}}
           {{!-- Exclude Knowledge Base category --}}
         {{else}}
           <li class="blocks-item">
@@ -65,6 +65,15 @@
         {{/is}}
       {{/is}}
     {{/each}}
+    <li class="blocks-item">
+            <a href="/hc/en-us/sections/115001500309" class="blocks-item-link">
+              <div class="card-image cat-3"></div>
+              <div class="card-content">
+                <span class="blocks-item-title card-title">Service</span>
+                <span class="blocks-item-description card-description">Here you can find information about your orders, warranties and more.</span>
+              </div>
+            </a>
+          </li>
   </ul>
   {{pagination}}
 </section>

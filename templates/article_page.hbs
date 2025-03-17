@@ -11,9 +11,15 @@
 
  </div>
 
-<div class="breadcrumbs-container breadcrumbs-container-article">
-   {{breadcrumbs}}
-    </div>
+{{#is section.id 115001500309}}
+<div class="breadcrumbs-container no-link">
+  {{breadcrumbs}}
+</div>
+{{else}}
+<div class="breadcrumbs-container">
+  {{breadcrumbs}}
+</div>
+{{/is}}
 
 
   <div class="article-container" id="article-container">

@@ -9,9 +9,11 @@
 
 <div class="breadcrumbs-container">
   {{breadcrumbs}}
+
 </div>
 
 <div class="container">
+  
   {{!--
   <div class="sub-nav">
     {{breadcrumbs}}
@@ -43,7 +45,7 @@
               {{#is id 25242930788253}}
                 {{!-- Skip the Downloads section for this category --}}
               {{else}}
-                <li class="blocks-item">
+                <li class="blocks-item cat-{{../category.id}}">
                   <a href="{{url}}" class="blocks-item-link">
                     <div class="card-image sec-{{@index}}"></div>
                     <div class="card-content">
@@ -55,18 +57,7 @@
               {{/is}}
             {{/each}}
             
-            {{!-- For the specific Service category, append a hardcoded Download card --}}
-            {{#is category.id 25242786205469}}
-              <li class="blocks-item">
-                <a href="https://tentaclesync.com/downloads" target="_blank" rel="noopener noreferrer" class="blocks-item-link">
-                  <div class="card-image custom-download"></div>
-                  <div class="card-content">
-                    <span class="blocks-item-title card-title">Download</span>
-                    <span class="blocks-item-description card-description">View all our downloads on our home page</span>
-                  </div>
-                </a>
-              </li>
-            {{/is}}
+            {{!-- Hardcoded Download card removed --}}
           </ul>
         {{else}}
           <i class="category-empty">
@@ -119,10 +110,11 @@
 </div>
 <section class="section-contact">
   <div class="wrapper-contact">
-  <h2 class="contact heading-3d">Not what you needed?</h2>
+    <h2 class="contact heading-3d">Not what you needed?</h2>
     <nav class="primary-button pattern-shadow">
       <a href="/hc/en-us/requests/new?ticket_form_id=8872210400413">
-      <span>Contact Us!</span></a> 
+        <span>Contact Us!</span>
+      </a> 
     </nav>
   </div>
   <div class="contact-image"></div>
