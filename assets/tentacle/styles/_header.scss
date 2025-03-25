@@ -1,5 +1,7 @@
 .header {
-
+    height: auto;
+    width: 90%;
+    padding: 0;
 }
 
 .header-wrapper {
@@ -8,36 +10,42 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding: 2rem 0 0;
 }
 
-.header-knowledgebase {
+.header-help-desk {
     text-transform: uppercase;
     color: $color-secondary;
-    font-size: 1.32rem;
+    font-size: 0.8rem;
     font-weight: 700;
     transform: translateY(-1px);
 }
 
-.header-knowledgebase:visited {
-    color: $color-secondary;
+.header-help-desk-wrapper {
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
 }
-.header-knowledgebase:hover, .header-knowledgebase:active, .header-knowledgebase:focus {
-    color: $color-tertiary;
-    transition: 200ms;
+
+.header-help-desk-wrapper:link, .header-help-desk-wrapper:active, .header-help-desk-wrapper:visited {
     text-decoration: none;
-}
+}  
 
-
-.header-logo:hover * {
-    color: $color-tertiary;
+.header-help-desk:active, .header-help-desk:hover, .header-help-desk:visited {
+    text-decoration: none;
     
-}
+} 
 
 
-@media only screen and (max-width: 700px) {
-    .header-logo {
-        display: none;
+
+
+@media only screen and (max-width: 430px) {
+    .header-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+
     }
 }

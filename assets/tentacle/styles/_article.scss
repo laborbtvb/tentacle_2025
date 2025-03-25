@@ -69,6 +69,10 @@
     text-transform: uppercase;
 }
 
+.article-title {
+    margin-bottom: 0rem;
+}
+
 // Image embed
 .article-body img {
     margin: 2rem 0rem 1rem;
@@ -125,7 +129,7 @@ iframe, .video-container iframe {
 
 //Callout-Block
 .article-body pre {
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
     font-family: 'Benton Sans', sans-serif;
     font-size: 1rem;
     background: $color-secondary;
@@ -157,6 +161,73 @@ iframe, .video-container iframe {
     
 }
 
+// Table Styling
+
+table {
+    margin: 2rem 0;
+    font-family: 'Benton Sans', sans-serif;
+    font-size: 0.95rem;
+    background: $color-table;
+    color: $color-secondary;
+    padding: 0rem;
+    white-space: normal;
+    border-radius: $border-radius;
+    position: relative;
+    overflow: visible;
+    border: none;
+    border-collapse: separate!important;
+    border-spacing: 0;
+    border: black 1px solid;
+
+}
 
 
 
+table::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url("$assets-raster-tile-png");
+    background-size: 20px;
+    background-repeat: repeat;
+  transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
+    border-radius: $border-radius;
+
+    
+}
+
+tbody {
+    overflow: hidden;
+    border-radius: $border-radius;
+}
+
+table td {
+    padding: 1rem;
+    border: none;
+  
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid black;
+}
+
+
+table tbody tr:first-child td:first-child {
+    border-top-left-radius: $border-radius;
+  }
+  
+  table tbody tr:first-child td:last-child {
+    border-top-right-radius: $border-radius;
+  }
+  
+  table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: $border-radius;
+  }
+  
+  table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: $border-radius;
+  }
