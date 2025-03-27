@@ -175,10 +175,14 @@ a.blocks-item-link span {
 
 .blocks-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
   column-gap: min(2rem, 3%);
   row-gap: 2rem;
   width: 100%;
+}
+
+.section-tree .blocks-list {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .blocks-item {
@@ -263,6 +267,18 @@ a.blocks-item-link .card-image::before {
 
 .card-image.cat-3 {
   background: url("$assets-icon-service-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
+}
+
+.card-image.cat-4 {
+  background: url("$assets-icon-downloads-svg");
+  background-color: #8ac0cb;
+  background-size: cover;
+}
+
+.card-image.cat-5 {
+  background: url("$assets-icon-support-svg");
   background-color: #8ac0cb;
   background-size: cover;
 }
