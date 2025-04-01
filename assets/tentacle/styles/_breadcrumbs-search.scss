@@ -1,8 +1,9 @@
 .search-container-header {
     position: fixed;
     top: 2.25rem;
-    width: 25%;
+    width: 27%;
     z-index: 3000;
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -107,3 +108,67 @@ text-underline-offset: 6px;
     display: none;
   }
     
+//Search - wiht button
+
+.search [type="submit"] {
+    display: none;
+    background: $color-card;
+    color: $color-secondary;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0px $border-radius $border-radius 0px;
+    cursor: pointer;
+}
+
+.search.search-has-value::before {
+    border-radius: 0px $border-radius $border-radius 0px;
+    content:"search";
+    grid-column: 2 / 2;
+    grid-row: 1/1;
+    position: absolute;
+    background: $color-card;
+    color: $color-secondary;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-height: 40px;
+    height: 40px;
+    width: 100px;
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.hero-inner .search.search-has-value::before {
+    height: 54px;
+    width: 100px;
+    max-height: 54px;
+    padding: 14px;
+}
+
+
+
+.search.search-has-value {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 1fr;
+  }
+  
+  .search.search-has-value [type="submit"] {
+    grid-column: 2 / 2;
+    display: flex;
+
+    
+  }
+
+
+
+  .search.search-has-value .clear-button {
+    display: none;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+

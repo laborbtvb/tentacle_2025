@@ -1,3 +1,13 @@
+//removing sidebars
+
+.search-results-sidebar {
+    display: none;
+}
+
+.search-results-column {
+    flex: 100%;
+}
+
 // Sidebar
 
 .search-results-sidebar .sidenav-item:hover, .search-results-sidebar .sidenav-item.current {
@@ -36,6 +46,10 @@
 
 }
 
+.search-result-title {
+    padding-top: 0;
+}
+
 
 .search-result-breadcrumbs li a {
     font-size: 0.6rem;
@@ -69,6 +83,7 @@ text-underline-offset: 3px;
 .search-result-description em {
     color: $color-tertiary;
     font-style: normal;
+    font-weight: 700;
 }
 
 .collapsible-sidebar-toggle{
@@ -81,6 +96,9 @@ text-underline-offset: 3px;
     color: $color-secondary;
     padding-top: 0rem;
     padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .search-results .no-results .headline{
