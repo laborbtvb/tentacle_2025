@@ -30,12 +30,14 @@
     color: $color-secondary;
     text-decoration-thickness: 2px;
     text-underline-offset: 6px;
+    transition: 0.1s;
 }
 
 
 
 .article-body a:hover {
     color: $color-tertiary;
+    transition: 0.1s;
 }
 
 //Text styles
@@ -96,6 +98,11 @@ section.content-tags p {
     text-underline-offset: 6px;
 }
 
+.content-tag-item a:hover {
+    color: $color-tertiary;
+    transition: 0.1s;
+}
+
 // Video
 
 iframe, .video-container iframe {
@@ -134,7 +141,7 @@ iframe, .video-container iframe {
     font-size: 1rem;
     background: $color-secondary;
     color: $color-primary;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem;
     white-space: normal;
     border-radius: $border-radius;
     position: relative;
@@ -158,7 +165,16 @@ iframe, .video-container iframe {
     background-repeat: repeat;
   transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
     border-radius: $border-radius;
-    
+}
+
+.article-body pre a, .article-body pre a:visited {
+    color: $color-primary;
+    transition: 0.1s;
+}
+
+.article-body pre a:hover {
+    color: $color-tertiary;
+    transition: 0.1s;
 }
 
 // Table Styling
