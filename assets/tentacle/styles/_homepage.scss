@@ -140,6 +140,7 @@ transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
 .blocks-item {
   border: none;
   position: relative;
+  border-radius: $border-radius;
 }
 
 .blocks-item:hover * {
@@ -164,6 +165,11 @@ a.blocks-item-link span {
 
 .blocks-item-title {
   font-weight: 700;
+}
+
+.blocks-item:hover, .blocks-item:focus, .blocks-item:active {
+  background-color: black;
+
 }
 
 //Grid

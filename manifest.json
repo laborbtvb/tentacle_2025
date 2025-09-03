@@ -1,7 +1,7 @@
 {
   "name": "Tentacle 2025",
   "author": "labor-b",
-  "version": "5.0.29",
+  "version": "5.0.30",
   "api_version": 4,
   "default_locale": "en-us",
   "settings": [
@@ -27,7 +27,7 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#ffebdc"
+          "value": "#000"
         },
         {
           "identifier": "link_color",

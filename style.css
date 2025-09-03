@@ -4825,7 +4825,7 @@ main {
   color: rgb(255, 235, 220);
   position: relative;
   border: 2px solid black;
-  background: rgb(255, 70, 0);
+  background: #ff4600;
   text-transform: uppercase;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -4996,7 +4996,7 @@ main {
 
 [dir=ltr] .search .clear-button:focus {
   color: initial;
-  border: 1px solid rgb(255, 70, 0);
+  border: 1px solid #ff4600;
   box-shadow: none;
 }
 
@@ -5058,6 +5058,7 @@ a.blocks-item-link {
 .blocks-item {
   border: none;
   position: relative;
+  border-radius: 0.5rem;
 }
 
 .blocks-item:hover * {
@@ -5082,6 +5083,10 @@ a.blocks-item-link span {
 
 .blocks-item-title {
   font-weight: 700;
+}
+
+.blocks-item:hover, .blocks-item:focus, .blocks-item:active {
+  background-color: black;
 }
 
 .card-content {
@@ -5118,7 +5123,7 @@ a.blocks-item-link span {
 
 .blocks-item-link:focus {
   box-shadow: none;
-  border-color: rgb(255, 70, 0);
+  border-color: #ff4600;
 }
 
 @media (min-width: 768px) {
@@ -5226,7 +5231,7 @@ a.blocks-item-link:hover .card-image::before {
 }
 
 .article-body a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 0.1s;
 }
 
@@ -5251,7 +5256,7 @@ a.blocks-item-link:hover .card-image::before {
 }
 
 .article-body li::marker {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .article-body h4 {
@@ -5282,7 +5287,7 @@ section.content-tags p {
 }
 
 .content-tag-item a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 0.1s;
 }
 
@@ -5349,7 +5354,7 @@ iframe, .video-container iframe {
 }
 
 .article-body pre a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 0.1s;
 }
 
@@ -5435,15 +5440,15 @@ table tbody tr:last-child td:last-child {
 }
 
 .section-tree-title a {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .icon-star {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .section-tree .see-all-articles {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .page-header-description {
@@ -5520,7 +5525,7 @@ table tbody tr:last-child td:last-child {
 .article-list-item-wrapper:active, .article-list-item-wrapper:focus {
   background: #000;
   text-decoration: none;
-  border-color: rgb(255, 70, 0);
+  border-color: #ff4600;
 }
 
 @media (min-width: 1000px) {
@@ -5658,7 +5663,7 @@ table tbody tr:last-child td:last-child {
 }
 
 .breadcrumbs li a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 200ms;
 }
 
@@ -5922,7 +5927,7 @@ a.contact-card:hover .contact-card-image::before {
   padding: 1.5rem;
   color: rgb(255, 235, 220);
   border: 2px solid black;
-  background: rgb(255, 70, 0);
+  background: #ff4600;
   text-transform: uppercase;
   border-radius: 10px;
   font-size: 0.875rem;
@@ -5992,28 +5997,28 @@ a.contact-card:hover .contact-card-image::before {
 }
 
 #new-request-form [data-garden-id="buttons.anchor"]:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   text-decoration: none;
 }
 
 #new-request-form [data-garden-id="forms.input_message"] {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   font-weight: 700;
 }
 
 #new-request-form [data-garden-id="forms.input_message"] [data-garden-id="forms.input_message_icon"] {
-  fill: rgb(255, 70, 0);
+  fill: #ff4600;
 }
 
 div:has(> [data-test-id=notification]) {
-  background-color: rgb(255, 70, 0) !important;
+  background-color: #ff4600 !important;
   border-radius: 0.5rem;
   border: 1px black solid;
 }
 
 [data-test-id=notification], [data-test-id=notification]:focus, [data-test-id=notification]:active {
   color: rgb(255, 235, 220);
-  background-color: rgb(255, 70, 0) !important;
+  background-color: #ff4600 !important;
   border-radius: 0.5rem !important;
   border: none !important;
   margin: 0 !important;
@@ -6071,7 +6076,7 @@ div:has(> [data-test-id=notification]) {
 }
 
 .footer-link-wrapper a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 0.1s;
 }
 
@@ -6151,12 +6156,12 @@ div:has(> [data-test-id=notification]) {
 }
 
 .search-result-title a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   text-decoration: none;
 }
 
 .search-result-breadcrumbs li a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .search-result-breadcrumbs li a {
@@ -6173,7 +6178,7 @@ div:has(> [data-test-id=notification]) {
 }
 
 .search-result-breadcrumbs li a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   transition: 200ms;
 }
 
@@ -6193,7 +6198,7 @@ div:has(> [data-test-id=notification]) {
 }
 
 .search-result-description em {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
   font-style: normal;
   font-weight: 700;
 }
@@ -6227,7 +6232,7 @@ div:has(> [data-test-id=notification]) {
 }
 
 .error-strong {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .errorpage-container {
@@ -6271,7 +6276,7 @@ div:has(> [data-test-id=notification]) {
 }
 
 .errorpage-container a:hover {
-  color: rgb(255, 70, 0);
+  color: #ff4600;
 }
 
 .cat-25242792110877 .card-image {
