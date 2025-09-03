@@ -155,7 +155,10 @@
     </aside>
 
     <section id="main-content" class="search-results-column">
+      <div class="generative-answers-container-wrapper">
+      <div class="generative-answers-container">
       {{generative_answers}}
+      </div></div>
       <h1 class="search-results-subheading">
         {{#if results}}
           {{#is current_filter.identifier 'unified'}}
