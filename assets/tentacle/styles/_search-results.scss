@@ -1,4 +1,3 @@
-//removing sidebars
 
 .search-results-sidebar {
     display: none;
@@ -135,56 +134,4 @@ text-underline-offset: 3px;
     color: $color-secondary;
     text-decoration: underline;
 }
-
-// AI-Overview
-
-[data-test-id="generative-answers-container"] {
-    margin: 3rem 0 3rem;
-    font-family: 'Benton Sans', sans-serif;
-    font-size: 1rem;
-    background: $color-secondary;
-    color: $color-primary;
-    padding: 1rem 1rem 1.5rem;
-    white-space: normal;
-    border-radius: $border-radius;
-    position: relative;
-    overflow: visible;
-    border: 1px $color-secondary solid;
-}
-
-[data-test-id="generative-answers-container"]::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background: url("$assets-raster-tile-png");
-    background-size: 20px;
-    background-repeat: repeat;
-  transform: rotate(-0.8deg) translateX(0.5rem) translateY(0.5rem);
-    border-radius: $border-radius;
-}
-
-[data-test-id="generative-answers-container"] a, [data-test-id="generative-answers-container"] a:visited {
-    font-size: 0.6rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.25rem; /* 142.857% */
-    letter-spacing: 0.02188rem;
-    text-transform: uppercase;
-    text-underline-offset: 3px;
-      text-decoration: underline 1px;
-}
-
-[data-test-id="generative-answers-container"] a:hover {
-    color: $color-tertiary;
-}
-
-
-div[data-test-id="generative-answers-content"] {
-
-}
-
 
