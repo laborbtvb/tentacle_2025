@@ -116,7 +116,6 @@ iframe, .video-container iframe {
         outline: 1px solid black;
         aspect-ratio: 16 / 9;
         border-style: none!important;
-    
 }
 
 .video-container {
@@ -125,6 +124,28 @@ iframe, .video-container iframe {
     aspect-ratio: 16 / 9;
     height: auto;
     position: relative;
+}
+
+.video-container-vertical {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    max-height: 90vh;
+}
+
+iframe, .video-container-vertical iframe {
+    box-sizing: border-box;
+    border: black 0px solid;
+    border-radius: $border-radius;
+    background: black;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+        outline: 1px solid black;
+        aspect-ratio: 9 / 16;
+        border-style: none!important;
 }
 
 
