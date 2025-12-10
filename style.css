@@ -5312,6 +5312,28 @@ iframe, .video-container iframe {
   position: relative;
 }
 
+.video-container-vertical {
+  aspect-ratio: 9/16;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  max-height: 90vh;
+}
+
+iframe, .video-container-vertical iframe {
+  box-sizing: border-box;
+  border: black 0px solid;
+  border-radius: 0.5rem;
+  background: black;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  outline: 1px solid black;
+  aspect-ratio: 9/16;
+  border-style: none !important;
+}
+
 .article-body div {
   margin: 1rem 0rem 2rem;
 }
